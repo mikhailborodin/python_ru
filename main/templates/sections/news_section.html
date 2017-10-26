@@ -1,0 +1,11 @@
+{% load article_blocks %}
+<div class="js-masonry">
+  {% articles %}
+</div>
+<script type="text/javascript">
+  $('.js-masonry').masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: 3
+  });
+</script>

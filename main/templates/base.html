@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0018)https://python.ru/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="RAskX0UNOnUGX4OiXn7jalIRZj-SwZej5FRKUlBHEnM">
+  <meta name="theme-color" content="#ffffff">
+  <title>Python.ru</title>
+  <link media="all" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link media="all" rel="stylesheet" href="{% static 'main_page/css/all.css' %}">
+  <link media="all" rel="stylesheet" href="{% static 'main_page/css/font-awesome.min.css' %}">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <header class="header">
+        <div class="container">
+          <!-- logo -->
+          <div class="logo"><a href="https://python.ru/"><img src="{% static 'main_page/images/logo.png' %}" width="133" height="27" alt="Python.ru"></a></div>
+          <!-- main navigation -->
+          <nav class="main-nav">
+            <a href="https://python.ru/#" class="nav-opener"><span>Menu</span></a>
+            <div class="nav-drop">
+              <ul class="primary-menu js-navigation">
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#events">Анонсы</a></li>
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#resources">Ресурсы</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- social networks -->
+          <ul class="social-networks">
+            <li>
+              <a href="https://www.facebook.com/groups/MoscowDjango/" class="fa fa-facebook">facebook</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/moscowpython" class="fa fa-twitter">twitter</a>
+            </li>
+            <li>
+              <a href="http://slack.python.ru/" class="fa fa-slack">slack</a>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <!-- email -->
+        <a href="mailto:team@python.ru">team@python.ru</a>
+        <!-- social networks -->
+        <ul class="social-networks">
+
+            <li><a href="https://www.facebook.com/groups/MoscowDjango/" class="fa fa-facebook">facebook</a></li>
+
+            <li><a href="https://twitter.com/moscowpython" class="fa fa-twitter">twitter</a></li>
+
+            <li><a href="http://slack.python.ru/" class="fa fa-slack">slack</a></li>
+
+        </ul>
+        <!-- copyright -->
+        <p class="copyright">© 2016 <a href="https://python.ru/">Python.ru</a></p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

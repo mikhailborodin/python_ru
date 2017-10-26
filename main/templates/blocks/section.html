@@ -1,0 +1,7 @@
+{% for section in sections %}
+  <section class="{{ section.title }}-section" id="{{ section.title }}">
+    <div class="container">
+      {% include section.template_name %}
+    </div>
+  </section>
+{% endfor %}

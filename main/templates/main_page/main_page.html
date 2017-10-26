@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load blocks %}
+{% block content %}
+  <div id="top-banner" class="conf">
+    <a href="http://conf.python.ru/?utm_source=python-ru&amp;utm_medium=banner&amp;utm_campaign=python-ru-top" target="_blank">
+      <img src="/media/{{ banners.banner_top_desktop }}" alt="">
+    </a>
+  </div>
+  {% sections %}
+{% endblock %}

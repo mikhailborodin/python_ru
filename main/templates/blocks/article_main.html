@@ -1,0 +1,39 @@
+{% load thumbnail %}
+{% load article_blocks %}
+{% for item in articles %}
+  {% if forloop.counter == 2 %}
+      <div class="col-lg-4 grid-item">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong class="title">Новости</strong>
+          </div>
+          <div class="panel-body">
+            {% for item in news %}
+              <article class="article">
+                <time datetime="">{{ item.created }}</time>
+                <h1><a href="{{ item.get_absolute_url }}" target="_blank">
+                  {{ item.title }}
+                </a></h1>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+  {% endif %}
+  <div class="{% if item.large %}col-lg-8 grid-item-large{% else %}col-lg-4 grid-item{% endif %}">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="image-holder">
+          {% thumbnail item.img "384x256" crop="center" as im %}
+              <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.title }}">
+          {% endthumbnail %}
+        </div>
+        <div class="text-holder">
+          <time datetime="">{{ item.created }}</time>
+          <h1><a href="{{ item.get_absolute_url }}" target="_blank">{{ item.title }}</a></h1>
+          {{ item.preview }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
